@@ -1,0 +1,57 @@
+{
+  "name": "@pagodas/egg-routing-controllers-swagger",
+  "eggPlugin": {
+    "name": "routingControllersSwagger"
+  },
+  "dependencies": {
+    "koa-compose": "^4.1.0",
+    "ejs": "^2.6.1",
+    "swagger-ui-dist": "^3.20.2",
+    "koa-static": "^5.0.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "openapi3-ts": "^1.3.0"
+  },
+  "peerDependencies": {
+    "class-validator-jsonschema": "1.3.1",
+    "routing-controllers": "0.8.0",
+    "routing-controllers-openapi": "1.8.0",
+    "class-transformer": "^0.2.3",
+    "egg": "^2.6.1",
+    "class-validator": "0.10.1"
+  },
+  "version": "0.0.1",
+  "description": "bind swagger to routing-controller in egg.js.",
+  "devDependencies": {
+    "typescript": "^3.1.6",
+    "tslint": "^5.0.0",
+    "class-validator-jsonschema": "1.3.1",
+    "routing-controllers": "0.8.0",
+    "routing-controllers-openapi": "1.8.0",
+    "class-transformer": "^0.2.3",
+    "egg": "^2.6.1",
+    "class-validator": "0.10.1"
+  },
+  "scripts": {
+    "lint": "tslint --project . -c tslint.json",
+    "tsc": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chianquan/egg-routing-controllers-swagger.git"
+  },
+  "keywords": [
+    "egg",
+    "routing-controllers",
+    "swagger",
+    "typescript",
+    "ts",
+    "openapi"
+  ],
+  "author": "chianquan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chianquan/egg-routing-controllers-swagger/issues"
+  },
+  "homepage": "https://github.com/chianquan/egg-routing-controllers-swagger#readme"
+}
