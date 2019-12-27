@@ -37,8 +37,8 @@ export default (options: RoutingControllersSwaggerOptions) => {
       return next();
     };
   }
-  assert(routingControllersOptions, `[${pkg.name}] routingControllersOptions is required on config`);
-  assert(mountPath, `[${pkg.name}] mountPath is required on config`);
+  assert(routingControllersOptions, `[${(pkg as any).name}] routingControllersOptions is required on config`);
+  assert(mountPath, `[${(pkg as any).name}] mountPath is required on config`);
 
   const router = new KoaRouter();
 
