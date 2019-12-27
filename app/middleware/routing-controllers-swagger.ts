@@ -69,7 +69,7 @@ export default (options: RoutingControllersSwaggerOptions) => {
       components: {schemas},
       info: additionalProperties,
     });
-    return JSON.stringify(spec, null, 2);
+    return spec;
   };
   let specCache: any;
   router.get('/swagger.json', (ctx) => {

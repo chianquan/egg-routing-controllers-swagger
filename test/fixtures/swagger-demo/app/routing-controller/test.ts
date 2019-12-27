@@ -1,7 +1,7 @@
-import {Body, JsonController} from 'routing-controllers';
-import {OpenAPI} from 'routing-controllers-openapi';
 import {IsString} from 'class-validator';
 import {JSONSchema} from 'class-validator-jsonschema';
+import {Body, JsonController} from 'routing-controllers';
+import {OpenAPI} from 'routing-controllers-openapi';
 
 class PostInput {
   @IsString()

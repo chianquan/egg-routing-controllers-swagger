@@ -1,6 +1,4 @@
-'use strict';
-
-// import assert = require('assert');
+import assert = require('assert');
 import mm from 'egg-mock';
 import request = require('supertest');
 
@@ -19,7 +17,8 @@ describe('test/swagger.test.js', () => {
     return request(app.callback())
       .get('/swagger/swagger.json')
       .expect((res) => {
-        console.log(res);
+        assert(res.body && res.body.info);
+        console.log(JSON.stringify(res.body, null, 2));
       })
       .expect(200);
   });
