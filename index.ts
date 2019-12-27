@@ -45,7 +45,7 @@ export function ParamsWithOpenAPI() {
         .reject(({description}) => description === undefined)
         .value();
       return source;
-    })(object, methodName, {} as PropertyDescriptor); // todo
+    })(object, methodName, {} as PropertyDescriptor);
   };
 }
 
