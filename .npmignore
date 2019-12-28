@@ -5,4 +5,7 @@
 .nyc_output
 .vscode
 test
+typings
 send_to_test.sh
+tslint.json
+tsconfig.json
