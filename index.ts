@@ -11,6 +11,9 @@ import {ParameterObject} from 'openapi3-ts';
 import {OpenAPI} from 'routing-controllers-openapi';
 import {RoutingControllersSwaggerOptions} from './app/middleware/routing-controllers-swagger';
 
+export * from 'class-validator-jsonschema';
+export * from 'routing-controllers-openapi';
+
 // 扩展routing-controllers Params 使能直接绑定params的描述等配置信息
 export function ParamsWithOpenAPI() {
   return (object: object, methodName: string, index: number) => {
