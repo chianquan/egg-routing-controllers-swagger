@@ -9,7 +9,7 @@
     "emitDecoratorMetadata": true,
     "charset": "utf8",
     "allowJs": false,
-    "declaration": false,
+    "declaration": true,
     "pretty": true,
     "noEmitOnError": false,
     "noUnusedLocals": true,

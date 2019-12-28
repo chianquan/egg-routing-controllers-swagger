@@ -17,7 +17,7 @@ export function ParamsWithOpenAPI() {
     Params()(object, methodName, index);
     const type = Reflect.getMetadata('design:paramtypes', object, methodName)[index];
     const targetName = type.name;
-    OpenAPI((source) => {// todo 临时实现，后面确定下是否有官方支持的可能
+    OpenAPI((source) => {// todo tmp
       const metadatas = (getFromContainer(MetadataStorage)as any).validationMetadatas.filter((validationMetadata) => {
         return validationMetadata.target.name === targetName;
       });

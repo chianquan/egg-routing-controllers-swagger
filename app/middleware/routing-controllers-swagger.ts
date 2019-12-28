@@ -75,6 +75,18 @@ export default (options: RoutingControllersSwaggerOptions) => {
   router.get('/swagger.json', (ctx) => {
     if (!specCache) {
       specCache = createSpec();
+      const schemas = specCache.components && specCache.components.schemas || {};
+      if (!schemas.Object) {
+        schemas.Object = {
+          type: 'object',
+        };
+      }
+      if (!schemas.Array) {
+        schemas.Array = {
+          type: 'array',
+          items: {},
+        };
+      }
     }
     ctx.body = specCache;
   });

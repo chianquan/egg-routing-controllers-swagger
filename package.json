@@ -23,7 +23,7 @@
   },
   "version": "0.0.1",
   "main": "index.js",
-  "description": "bind swagger to routing-controller in egg.js.",
+  "description": "bind swagger doc in routing-controller in egg.js.",
   "devDependencies": {
     "@pagodas/egg-routing-controllers": "0.0.5",
     "@types/mocha": "^2.2.40",
@@ -45,7 +45,7 @@
     "lint": "tslint --project . -c tslint.json",
     "test": "egg-bin test -r egg-ts-helper/register --ts",
     "tsc": "tsc -p tsconfig.json",
-    "clean": "ets clean"
+    "clean": "find .|grep -v -E '\\./(node_modules|typing)/.*$'|grep -E '.*\\.(d\\.ts|js)$'|xargs rm"
   },
   "repository": {
     "type": "git",

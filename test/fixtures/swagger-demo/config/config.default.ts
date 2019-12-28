@@ -11,6 +11,21 @@ export default (app: EggAppInfo) => {
     },
   };
   return {
+    security: {
+      csrf: {
+        enable: false,
+      },
+      xframe: {
+        enable: false,
+      },
+      noopen: {
+        enable: false,
+      },
+      xssProtection: {
+        enable: false,
+      },
+      domainWhiteList: ['http://localhost:8000'],
+    },
     keys: 'foo',
     routingControllers: {
       options: routingControllersOptions,
