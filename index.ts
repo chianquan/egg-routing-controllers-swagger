@@ -8,11 +8,19 @@ import {
 import {validationMetadatasToSchemas} from 'class-validator-jsonschema';
 import _ = require('lodash');  // todo remove
 import {ParameterObject} from 'openapi3-ts';
-import {OpenAPI} from 'routing-controllers-openapi';
 import {RoutingControllersSwaggerOptions} from './app/middleware/routing-controllers-swagger';
 
 export * from 'class-validator-jsonschema';
 export * from 'routing-controllers-openapi';
+
+import classValidatorJsonSchema = require('class-validator-jsonschema');
+import routingControllersOpenapi = require('routing-controllers-openapi');
+
+export const JSONSchema = classValidatorJsonSchema.JSONSchema;
+export const OpenAPI = routingControllersOpenapi.OpenAPI;
+export const ResponseSchema = routingControllersOpenapi.ResponseSchema;
+export const applyOpenAPIDecorator = routingControllersOpenapi.applyOpenAPIDecorator;
+export type OpenAPIParam = routingControllersOpenapi.OpenAPIParam;
 
 // 扩展routing-controllers Params 使能直接绑定params的描述等配置信息
 export function ParamsWithOpenAPI() {
