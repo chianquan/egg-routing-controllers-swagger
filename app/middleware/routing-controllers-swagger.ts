@@ -18,7 +18,7 @@ export interface RoutingControllersSwaggerOptions {
   routingControllersOptions: RoutingControllersOptions;
   mountPath?: string;
   enable?: boolean;
-  additionalProperties: InfoObject;
+  additionalProperties?: InfoObject;
 }
 
 export default (options: RoutingControllersSwaggerOptions) => {

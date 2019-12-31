@@ -16,13 +16,14 @@ export * from 'routing-controllers-openapi';
 import classValidatorJsonSchema = require('class-validator-jsonschema');
 import routingControllersOpenapi = require('routing-controllers-openapi');
 
+// declare all the dependence decorator,so that IDE can recognize and use the auto import feature.
 export const JSONSchema = classValidatorJsonSchema.JSONSchema;
 export const OpenAPI = routingControllersOpenapi.OpenAPI;
 export const ResponseSchema = routingControllersOpenapi.ResponseSchema;
 export const applyOpenAPIDecorator = routingControllersOpenapi.applyOpenAPIDecorator;
 export type OpenAPIParam = routingControllersOpenapi.OpenAPIParam;
 
-// 扩展routing-controllers Params 使能直接绑定params的描述等配置信息
+// extends routing-controllers Params ,make description for params take effect.
 export function ParamsWithOpenAPI() {
   return (object: object, methodName: string, index: number) => {
     Params()(object, methodName, index);
@@ -60,7 +61,7 @@ export function ParamsWithOpenAPI() {
   };
 }
 
-// 扩展routing-controllers Params 使能直接绑定params的描述等配置信息
+// extends routing-controllers QueryParams ,make description for QueryParams take effect.
 export function QueriesWithOpenAPI() {
   return (object: object, methodName: string, index: number) => {
     QueryParams()(object, methodName, index);
@@ -68,7 +69,7 @@ export function QueriesWithOpenAPI() {
     const type = Reflect.getMetadata('design:paramtypes', object, methodName)[index];
     // console.log(tmp, type);
     const targetName = type.name;
-    OpenAPI((source) => {// todo 临时实现，后面确定下是否有官方支持的可能
+    OpenAPI((source) => {
       const metadatas = (getFromContainer(MetadataStorage)as any).validationMetadatas.filter((validationMetadata) => {
         return validationMetadata.target.name === targetName;
       });
