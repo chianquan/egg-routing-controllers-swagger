@@ -19,7 +19,7 @@
     "routing-controllers": "0.8.0",
     "class-transformer": "^0.2.3",
     "egg": "^2.6.1",
-    "class-validator": "0.10.1"
+    "class-validator": "0.14.0"
   },
   "version": "0.0.5",
   "main": "index.js",
@@ -31,7 +31,7 @@
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
     "class-transformer": "^0.2.3",
-    "class-validator": "0.10.1",
+    "class-validator": "0.14.0",
     "egg": "^2.6.1",
     "egg-bin": "^4.6.2",
     "egg-mock": "^3.8.0",
