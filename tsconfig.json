@@ -7,7 +7,6 @@
     "noImplicitAny": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "charset": "utf8",
     "allowJs": false,
     "declaration": true,
     "pretty": true,
@@ -23,10 +22,5 @@
     "inlineSourceMap": true,
     "importHelpers": true
   },
-  "exclude": [
-    "app/public",
-    "app/views",
-    "node_modules*",
-    "parser"
-  ]
+  "exclude": ["app/public", "app/views", "node_modules*", "parser"]
 }
